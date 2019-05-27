@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    
+</head>
+<body>
+	
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">标题</h1>
+	</header>
+	<div class="mui-content">
+	    <ul class="mui-table-view">
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right" id="jumpbaidu" name="baidu">
+	                   		 百度
+	                </a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right" id="jumpxinlang" name="xinlang">
+	                    	 新浪
+	                </a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right" id="jumpweobo" name="weibo">
+	                    	微博
+	                </a>
+	            </li>
+	        </ul>
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui('body').on('tap','#jumpbaidu',foo_1);
+      	mui('body').on('tap','#jumpxinlang',foo_2);
+      	mui('body').on('tap','#jumpweobo',foo_3);
+      	function foo_1(){
+    		var newsId=this.id;
+    		var htmlName=this.name;
+	  		commonPage(newsId,htmlName);
+      	}
+      	function foo_2(){
+      		var newsId=this.id;
+      		var htmlName=this.name;
+    		commonPage(newsId,htmlName);
+      	}
+      	function foo_3(){
+      		var newsId=this.id;
+      		var htmlName=this.name;
+    		commonPage(newsId,htmlName);
+      	}
+      	
+      	function commonPage(newsId,htmlName){	
+      		mui.plusReady(function(){
+      			document.getElementById(newsId).addEventListener('tap',function(){
+      				mui.openWindow({
+      					url:htmlName+'.html',
+      					id:htmlName
+      				})
+      			})
+      		})
+      	}
+    </script>
+</body>
+</html>

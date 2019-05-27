@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--1秒自动跳转新浪-->
+		<!--<meta content="1;url=https://www.sina.com.cn" http-equiv="refresh"/>-->
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+	<!--标题栏-->
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">新浪</h1>
+		</header>
+	<!--主体-->
+		<div class="mui-content">
+		    
+		</div>
+	<!--JavaScript-->
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				subpages:[{
+					url:'https://www.sina.com.cn',
+					styles:{  	
+						top:'45px',
+      					bottom:'0px'
+      				}
+				}]
+			})
+		</script>
+	</body>
+
+</html>
